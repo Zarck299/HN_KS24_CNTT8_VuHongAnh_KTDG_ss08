@@ -25,7 +25,7 @@ create table project(
 -- 2 thao tác cấu trúc bảng:
 alter table employee add column email varchar(100) unique;
 alter table project modify column project_name varchar(200);
-alter table project modify column end_date date check(end_date > start_date);
+alter table project add constrain chk_date check(end_date > start_date);
 -- 3 thao tác dữ liệu:
 insert into department(dept_name, location) values
 ('IT', 'Ha Noi'),
